@@ -7,6 +7,11 @@ node_modules/
 .pnp.js
 .yarn/install-state.gz
 
+node_modules/
+.next/
+.env
+.DS_Store
+
 # testing
 /coverage
 
