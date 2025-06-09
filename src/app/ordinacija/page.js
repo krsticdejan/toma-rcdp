@@ -3,7 +3,7 @@
 import Container from "../components/Container";
 import useFetch from "../hooks/useFetch";
 import Title from "../components/about/Title"
-import Image from "../components/about/Image"
+import ImageOrdination from "../components/about/Image"
 import Text from "../components/about/Text"
 import useImage from "../hooks/useImage";
 
@@ -22,7 +22,7 @@ const AboutPage = () => {
       <Container>
         <div className="ordination__wrap">
           <Title title={pageDataText} />
-          <Image source={mediaData.src} altTag={mediaData.alt} />
+          <ImageOrdination source={mediaData.src} altTag={mediaData.alt ? mediaData.alt : 'ordinacija'} />
         </div>
         <Text text={pageDataDescription} />
       </Container>

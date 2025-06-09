@@ -12,7 +12,7 @@ import useImage from "../hooks/useImage";
 import Container from "../components/Container";
 import Title from "../components/team/Title";
 import Text from "../components/team/Text";
-import Image from "../components/team/Image";
+import ImageTeam from "../components/team/Image";
 import BiographyContent from '../components/team/BiographyContent';
 const PAGE_SLUG = "tomislav-gajic";
 
@@ -93,7 +93,7 @@ const TomaPage = () => {
                     <div className="biography__banner-wrapper">
                         <div className="biography__banner">
                             <Title text={pageTitle} />
-                            <Image source={mainImage.src} altTag={mainImage.alt} />
+                            <ImageTeam source={mainImage.src} altTag={mainImage.alt ? mainImage.alt : 'Tomislav Gajic'} />
                             <Text text={pageShotBio} />
                         </div>
                     </div>
