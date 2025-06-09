@@ -37,17 +37,17 @@ const Header = () => {
       <Container>
         <Navigation />
       </Container>
-      <div id="play-audio" class="music-play">
-        <div class="sound-wave">
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
-          <div class="sound-bar"></div>
+      <div id="play-audio" className="music-play">
+        <div className="sound-wave">
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
+          <div className="sound-bar"></div>
         </div>
       </div>
     </header>
