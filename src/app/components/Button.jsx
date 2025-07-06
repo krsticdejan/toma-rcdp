@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import TransitionLink from "./TransitionLink";
+
 const Button = ({ link, title, target }) => {
   return (
-    <Link href={link} target={target || "_self"} className="btn-rcdp">
+    <TransitionLink href={link} target={target || "_self"} className="btn-rcdp">
       <span className="btn-rcdp__icon">
         <svg
           id="Group_51303"
@@ -44,7 +46,7 @@ const Button = ({ link, title, target }) => {
         </svg>
       </span>
       <span className="btn-rcdp__text">{title}</span>
-    </Link>
+    </TransitionLink>
   );
 };
 

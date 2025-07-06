@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Image from "next/image";
+// import { TransitionLink } from "./utils/TransitionLink";
+import TransitionLink from "./TransitionLink";
 
 const Links = [
   { url: "/", label: "Početna" },
@@ -65,9 +67,13 @@ const Navigation = () => {
   return (
     <div className="site-header__wrap">
       <div className="site-branding">
-        <Link href="/" className="custom-logo-link" aria-current="page">
+        <TransitionLink
+          href="/"
+          className="custom-logo-link"
+          aria-current="page"
+        >
           <Image src="logo.svg" alt="custom-logo" width={213} height={77} />
-        </Link>
+        </TransitionLink>
       </div>
 
       <div className="site-header__menu">
@@ -99,7 +105,9 @@ const Navigation = () => {
                         link.url === pathname ? "current-menu-item" : ""
                       }`}
                     >
-                      <Link href={link.url}>{link.label}</Link>
+                      <TransitionLink href={link.url}>
+                        {link.label}
+                      </TransitionLink>
                     </li>
                   ))}
                 </ul>

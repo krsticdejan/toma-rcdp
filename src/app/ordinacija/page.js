@@ -15,14 +15,29 @@ const AboutPage = () => {
   const pageDataText = pageData?.acf?.text || [];
   const pageDataImage = pageData?.acf?.image || [];
   const pageDataDescription = pageData?.acf?.description || [];
-  const { mediaData, loading: imgLoading, error: imgError } = useImage(pageDataImage);
+  // const { mediaData, loading: imgLoading, error: imgError } = useImage(pageDataImage);
+
+  // Ensure it's a number or string (ID), not an array
+  const imageId = Array.isArray(pageData?.acf?.image) ? pageData.acf.image[0] : pageData?.acf?.image;
+
+  const { mediaData, loading: imgLoading, error: imgError } = useImage(imageId);
+
 
   return (
     <section className="ordination">
       <Container>
         <div className="ordination__wrap">
           <Title title={pageDataText} />
-          <ImageOrdination source={mediaData.src} altTag={mediaData.alt ? mediaData.alt : 'ordinacija'} />
+          {imgLoading ? (
+            <div>Loading image…</div>
+          ) : mediaData.src ? (
+            <ImageOrdination
+              source={mediaData.src}
+              altTag={mediaData.alt || "ordinacija"}
+            />
+          ) : (
+            <div></div>
+          )}
         </div>
         <Text text={pageDataDescription} />
       </Container>

@@ -1042,8 +1042,7 @@ body {
   display: block;
   z-index: 99;
   background-color: var(--color-red);
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
+
   transform: translateY(0%);
 }
 
@@ -1855,6 +1854,11 @@ body {
   .biography-content__wrap {
     gap: 10px;
   }
+  .biography-content__item :where(h2, h3, h4, h5, h6)::before {
+    left: -19px;
+    width: 14px;
+    height: 14px;
+  }
 }
 
 @media only screen and (max-width: 575px) {
@@ -1875,6 +1879,10 @@ body {
 
   .biography__text p {
     font-size: 1em;
+  }
+
+  .biography-content__line-before {
+    width: 2px;
   }
 }
 
@@ -2087,4 +2095,29 @@ body {
   .ordination__wrap {
     padding-top: 105px;
   }
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  height: 100vh; /* Same as min-h-screen */
+  background-color: var(--color-red); /* Equivalent to bg-neutral-950 */
+  z-index: 9999999;
+  width: 25%; /* Equivalent to w-1/4 */
+}
+
+#banner-1 {
+  left: 0%;
+}
+
+#banner-2 {
+  left: 25%;
+}
+
+#banner-3 {
+  left: 50%;
+}
+
+#banner-4 {
+  left: 75%;
 }
