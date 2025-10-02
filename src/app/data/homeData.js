@@ -1,6 +1,13 @@
 const homeData = {
     slide: [
         {
+            title: "Regionalni\nCentar Za\nDinamicku\nPsihijatriju",
+            text: "specijalistička lekarska ordinacija iz oblasti psihijatrije i psihoterapije",
+            image: "/brain.png",
+            link: "/ordinacija",
+            logotypes: []
+        },
+        {
             title: "Prof. dr\nTomislav\nGajić",
             text: "dr med.sci. specijalista psihijatrije, specijalista psihoterapije, primarijus, vanredni profesor",
             image: "/toma.png",
@@ -56,13 +63,7 @@ const homeData = {
                 }
             ]
         },
-        {
-            title: "Regionalni\nCentar Za\nDinamicku\nPsihijatriju",
-            text: "specijalistička lekarska ordinacija iz oblasti psihijatrije i psihoterapije",
-            image: "/brain.png",
-            link: "/ordinacija",
-            logotypes: []
-        },
+
 
     ]
 };
