@@ -4,7 +4,6 @@ import PartnerLogoItem from "./PartnerLogoItem";
 
 const PartnerLogos = ({ partners = [], isMobile = false }) => {
   if (!partners.length) return null;
-
   return (
     <ul
       className={`hero-slider__partners ${

@@ -11,6 +11,7 @@ const BiographyContent = ({
   pageDataRepeater,
   pageDataLinkNext,
   nextImage,
+  linkNextTitle,
 }) => {
   const mainRef = useRef();
 
@@ -101,14 +102,12 @@ const BiographyContent = ({
           </div>
         </div>
 
-        {nextImage?.src && (
-          <Next
-            source={nextImage.src}
-            altTag={nextImage.alt}
-            title={pageDataLinkNext.title}
-            link={new URL(pageDataLinkNext.url).pathname}
-          />
-        )}
+        <Next
+          source={nextImage}
+          altTag="Tomislav Gajic"
+          title={linkNextTitle}
+          link={pageDataLinkNext}
+        />
       </div>
       <div className="hero-pagination is--biography">
         <div className="hero-pagination__item hero-pagination__current">01</div>

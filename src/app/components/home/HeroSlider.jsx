@@ -42,7 +42,7 @@ const HeroSlider = ({
           <HeroSlide
             slide={slide}
             index={index}
-            image={sliderImages[index]}
+            image={sliderImages}
             partnerImages={partnerImages}
           />
         </SwiperSlide>

@@ -6,37 +6,16 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-import useFetch from "../hooks/useFetch";
-import useImage from "../hooks/useImage";
 
 import Container from "../components/Container";
 import Title from "../components/team/Title";
 import Text from "../components/team/Text";
 import ImageTeam from "../components/team/Image";
 import BiographyContent from '../components/team/BiographyContent';
-const PAGE_SLUG = "tomislav-gajic";
+import tomaData from "../data/tomaData";
 
 const TomaPage = () => {
     const mainRef = useRef();
-
-    // Fetch data
-    const { data } = useFetch(`/wp-json/wp/v2/pages?slug=${PAGE_SLUG}`);
-    const pageData = data?.[0];
-    const {
-        acf: {
-            text: pageTitle = "",
-            about: pageShotBio = "",
-            image: pageDataImage = [],
-            next_img: pageDataImageNext = [],
-            bio_repeater: pageDataRepeater = [],
-            next_link: pageDataLinkNext = null,
-        } = {},
-    } = pageData || {};
-
-    // Image hooks
-    const { mediaData: mainImage = {} } = useImage(pageDataImage);
-    const { mediaData: nextImage = {} } = useImage(pageDataImageNext);
-
     // GSAP animation setup
     useGSAP(() => {
 
@@ -92,18 +71,20 @@ const TomaPage = () => {
                 <Container>
                     <div className="biography__banner-wrapper">
                         <div className="biography__banner">
-                            <Title text={pageTitle} />
-                            <ImageTeam source={mainImage.src} altTag={mainImage.alt ? mainImage.alt : 'Tomislav Gajic'} />
-                            <Text text={pageShotBio} />
+                            <Title text={tomaData.text} />
+                            <ImageTeam source={tomaData.image} altTag="Tomislav Gajic" />
+                            <Text text={tomaData.about} />
                         </div>
                     </div>
                 </Container>
             </section>
 
             <BiographyContent
-                pageDataRepeater={pageDataRepeater}
-                pageDataLinkNext={pageDataLinkNext}
-                nextImage={nextImage}
+                pageDataRepeater={tomaData.description}
+                pageDataLinkNext={tomaData.linkNext}
+                nextImage={tomaData.nextImage}
+                linkNextTitle={tomaData.linkNextTitle}
+
             />
 
 

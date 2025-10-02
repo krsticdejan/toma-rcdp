@@ -6,37 +6,16 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-import useFetch from "../hooks/useFetch";
-import useImage from "../hooks/useImage";
 
 import Container from "../components/Container";
 import Title from "../components/team/Title";
 import Text from "../components/team/Text";
 import ImageTeam from "../components/team/Image";
 import BiographyContent from '../components/team/BiographyContent';
-const PAGE_SLUG = "branka-stamatovic-gajic";
+import branaData from "../data/branaData";
 
 const BranaPage = () => {
     const mainRef = useRef();
-
-    // Fetch data
-    const { data } = useFetch(`/wp-json/wp/v2/pages?slug=${PAGE_SLUG}`);
-    const pageData = data?.[0];
-    const {
-        acf: {
-            text: pageTitle = "",
-            about: pageShotBio = "",
-            image: pageDataImage = [],
-            next_img: pageDataImageNext = [],
-            bio_repeater: pageDataRepeater = [],
-            next_link: pageDataLinkNext = null,
-        } = {},
-    } = pageData || {};
-
-    // Image hooks
-    const { mediaData: mainImage = {} } = useImage(pageDataImage);
-    const { mediaData: nextImage = {} } = useImage(pageDataImageNext);
-
     // GSAP animation setup
     useGSAP(() => {
 
@@ -92,18 +71,21 @@ const BranaPage = () => {
                 <Container>
                     <div className="biography__banner-wrapper">
                         <div className="biography__banner">
-                            <Title text={pageTitle} />
-                            <ImageTeam source={mainImage.src} altTag={mainImage.alt ? mainImage.alt : 'Branka Gajic'} />
-                            <Text text={pageShotBio} />
+                            <Title text={branaData.text} />
+                            <ImageTeam source={branaData.image} altTag="Tomislav Gajic" />
+                            <Text text={branaData.about} />
                         </div>
                     </div>
                 </Container>
             </section>
 
+
+
             <BiographyContent
-                pageDataRepeater={pageDataRepeater}
-                pageDataLinkNext={pageDataLinkNext}
-                nextImage={nextImage}
+                pageDataRepeater={branaData.description}
+                pageDataLinkNext={branaData.linkNext}
+                nextImage={branaData.nextImage}
+                linkNextTitle={branaData.linkNextTitle}
             />
 
 

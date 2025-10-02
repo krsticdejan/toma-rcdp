@@ -1,30 +1,19 @@
 "use client";
 import { useState } from "react";
 import Container from "./components/Container";
-import useFetch from "./hooks/useFetch";
-import useSliderImages from "./hooks/useSliderImages";
-import usePartnerLogos from "./hooks/usePartnerLogos";
 import HeroSlider from "./components/home/HeroSlider";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-const PAGE_SLUG = "pocetna";
+import homeData from "./data/homeData";
 
 const HomePage = () => {
-  const { data, loading } = useFetch(`/wp-json/wp/v2/pages?slug=${PAGE_SLUG}`);
   const [heroSlider, setHeroSlider] = useState(null);
-
-  const pageData = data?.[0];
-  const sliderData = pageData?.acf?.slider || [];
-  const sliderImages = useSliderImages(pageData);
-  const partnerImages = usePartnerLogos(pageData);
   const onLeave = (origin, destination, direction) => {
     const targetIndex = destination.index;
     if (heroSlider && typeof heroSlider.slideTo === "function") {
       heroSlider.slideTo(targetIndex);
     }
   };
-
-
   return (
     <section id="uvod" className="hero white-section">
       <ReactFullpage
@@ -44,13 +33,11 @@ const HomePage = () => {
         )}
       />
       <Container>
-        {/* <FullpageSections onLeave={(origin, destination) => {
-          heroSlider?.slideTo?.(destination.index);
-        }} /> */}
+
         <HeroSlider
-          sliderData={sliderData}
-          sliderImages={sliderImages}
-          partnerImages={partnerImages}
+          sliderData={homeData.slide}
+          sliderImages={homeData.slide}
+          partnerImages={homeData.slide}
           setHeroSlider={setHeroSlider}
         />
       </Container>

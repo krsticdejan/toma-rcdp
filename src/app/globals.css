@@ -1727,6 +1727,12 @@ body {
   padding-top: 5em;
 }
 
+.biography-content__items li,
+.biography-content__items ul,
+.biography-content__items p {
+  color: #000000;
+}
+
 .biography-content__item :where(h2, h3, h4, h5, h6) {
   position: relative;
 }
@@ -2002,9 +2008,16 @@ body {
   color: var(--color-red);
 }
 
+.contact__item {
+  position: relative;
+}
+
 .contact__item-img {
   width: 8em;
   min-width: 8em;
+  position: absolute;
+  right: 1.8em;
+  top: 1.8em;
 }
 
 .contact__item-img img {

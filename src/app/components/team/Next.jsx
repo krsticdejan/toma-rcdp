@@ -38,7 +38,6 @@ const NextImage = ({ source, altTag, title, link }) => {
       <TransitionLink href={customLink} target="_self" className="next-link">
         <Image
           src={customImage}
-          alt={altTag}
           width={120}
           height={120}
           style={{ objectFit: "contain" }}
