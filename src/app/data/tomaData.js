@@ -7,11 +7,11 @@ const tomaData = {
         <p>dr med.sci. specijalista psihijatrije, specijalista psihoterapije, primarijus, vanredni profesor</p>
     `,
     about: `
-        <p>ECP European Certificate of Psychotherapy (ECP)</p>
-        <p>Associate of the Institute for International Health and Education, New York State, USA</p>
-        <p>Psychiatric Fellow of the American Academy of Psychoanalysis and Dynamic Psychiatry</p>
-        <p>Member of World Association for Dynamic Psychiatry</p>
-        <p>Member of The International Association for Relational Psychoanalysis and Psychiatry</p>
+        <p><strong>ECP European Certificate of Psychotherapy (ECP)</strong></p>
+        <p><strong>Associate of the Institute for International Health and Education, New York State, USA</strong></p>
+        <p><strong>Psychiatric Fellow of the American Academy of Psychoanalysis and Dynamic Psychiatry</strong></p>
+        <p><strong>Member of World Association for Dynamic Psychiatry</strong></p>
+        <p><strong>Member of The International Association for Relational Psychoanalysis and Psychiatry</strong></p>
     `,
     image: "/toma-single.png",
     description: [

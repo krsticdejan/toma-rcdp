@@ -7,10 +7,10 @@ const branaData = {
         <p>dr med.sci. specijalista psihijatrije, specijalista psihoterapije, primarijus, redovni profesor</p>
     `,
     about: `
-        <p>Associate of the Institute for International Health and Education, New York State, USA</p>
-        <p>Psychiatric Member American Academy of Psychoanalysis and Dynamic Psychiatry</p>
-        <p>Member of World Association for Dynamic Psychiatry</p>
-        <p>Member of The International Association for Relational Psychoanalysis and Psychiatry</p>
+        <p><strong>Associate of the Institute for International Health and Education, New York State, USA</strong></p>
+        <p><strong>Psychiatric Member American Academy of Psychoanalysis and Dynamic Psychiatry</strong></p>
+        <p><strong>Member of World Association for Dynamic Psychiatry</strong></p>
+        <p><strong>Member of The International Association for Relational Psychoanalysis and Psychiatry</strong></p>
     `,
     image: "/brana-sajt.webp",
     description: [
