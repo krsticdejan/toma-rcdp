@@ -24,7 +24,7 @@ const HeroSlide = ({ slide, index, image, partnerImages }) => {
           alt={slide.title}
           width={649}
           height={722}
-          className="main-img"
+          className={`main-img ${slide.class}`}
         />
 
         {slide.logotypes && (

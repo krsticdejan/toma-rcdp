@@ -5,7 +5,8 @@ const homeData = {
             text: "specijalistička lekarska ordinacija iz oblasti psihijatrije i psihoterapije",
             image: "/brain.png",
             link: "/ordinacija",
-            logotypes: []
+            logotypes: [],
+            class: 'hidden'
         },
         {
             title: "Prof. dr\nTomislav\nGajić",
@@ -33,7 +34,8 @@ const homeData = {
                     src: "/logo-5.png",
                     alt: "Logo 5"
                 }
-            ]
+            ],
+            class: ''
         },
         {
             title: "Prof. dr Branka\nStamatović\nGajić",
@@ -61,7 +63,8 @@ const homeData = {
                     src: "/logo-5.png",
                     alt: "Logo 5"
                 }
-            ]
+            ],
+            class: ''
         },
 
 

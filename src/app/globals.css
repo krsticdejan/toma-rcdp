@@ -1379,6 +1379,11 @@ body {
   max-width: 31em;
 }
 
+.main-img.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .hero-slide__img .rotate-img {
   position: absolute;
   bottom: 0;
@@ -2079,6 +2084,10 @@ body {
   width: 100%;
   height: auto;
   border-radius: 1em;
+}
+
+.ordination__description p {
+  color: #000;
 }
 
 @media only screen and (max-width: 991px) {
